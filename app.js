@@ -11,11 +11,11 @@ async function displayQuote() {
     const image = await response.blob()
     quote.image = URL.createObjectURL(image);
   } catch (error) {
-    quote = { text: `Could not get quote2: ${error.message}` };
+    quote = { text: 'Could not get quote2: ${error.message}' };
   }
 
   // Update background image
-  document.body.style.background = quote.image ? `url(${quote.image}) center / cover` : '#f43';
+  document.body.style.background = quote.image ? 'url(${quote.image}) center / cover' : '#f43';
 
   // Update text
   const div = document.getElementById('quote');
